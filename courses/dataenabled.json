@@ -1,0 +1,10 @@
+[
+ {"year": 2019, "semester": "spring", "class": 32227, "comment": "astron 128"},
+ {"year": 2019, "semester": "spring", "class": 32857, "comment": "astron 256"},
+ {"year": 2019, "semester": "spring", "class": 27748, "comment": "civeng 93"},
+ {"year": 2019, "semester": "spring", "class": 25868, "comment": "cogsci 131"},
+ {"year": 2019, "semester": "spring", "class": 19849, "comment": "cogsci 190"},
+ {"year": 2019, "semester": "spring", "class": 28076, "comment": "cogsci 189"},
+ {"year": 2019, "semester": "spring", "class": 24723, "comment": "stat 133"},
+ {"year": 2019, "semester": "spring", "class": 24765, "comment": "stat 154"}
+]

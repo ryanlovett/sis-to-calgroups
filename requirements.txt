@@ -1,0 +1,3 @@
+requests
+git+https://github.com/ryanlovett/sis-cli.git
+git+https://github.com/ryanlovett/grouper-cli.git
