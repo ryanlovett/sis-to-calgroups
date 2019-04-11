@@ -1,13 +1,10 @@
 #!/bin/bash
 
-# jq -r '.[] | [ .year, .semester, .class ] | @sh' < courses.json | \
-# 	xargs -n 3 make-groups.sh
-
 set -e
 
 # api creds
-sis_creds="${HOME}/proj/sis/sis-cli/sis.json"
-grouper_creds="${HOME}/proj/grouper-cli/.grouper.json"
+sis_creds="repo/secrets/sis.json"
+grouper_creds="repo/secrets/grouper.json"
 
 # root grouper folder
 org_fldr="edu:berkeley:org:stat:classes"
