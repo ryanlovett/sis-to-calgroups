@@ -48,9 +48,9 @@ jobs:
           environment:
             GROUPER_BASE_URI: https://calgroups.berkeley.edu/gws/servicesRest/json/v2_2_100
           command: |
-            for course in courses/*json ; do
-              echo ${course}
-              jq -r '.[] | [ .year, .semester, .class ] | @sh' < ${course} | \
+            for filename in ~/repo/courses/*json ; do
+              echo ${filename}
+              jq -r '.[] | [ .year, .semester, .class ] | @sh' < ${filename} | \
                 xargs -n 3 ./make-groups.sh
             done
 
