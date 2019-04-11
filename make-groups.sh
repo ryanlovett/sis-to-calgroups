@@ -3,8 +3,15 @@
 set -e
 
 # api creds
-sis_creds="~/repo/secrets/sis.json"
-grouper_creds="~/repo/secrets/grouper.json"
+sis_creds="${HOME}/repo/secrets/sis.json"
+grouper_creds="${HOME}/repo/secrets/grouper.json"
+
+for filename in $sis_creds $grouper_creds ; do
+	if [ ! -f $filename ]; then
+		echo No such file: $filename
+	fi
+	exit 1
+done
 
 # root grouper folder
 org_fldr="edu:berkeley:org:stat:classes"
