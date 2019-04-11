@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  make_groups:
+  build:
     docker:
       - image: buildpack-deps:bionic-scm
 
@@ -66,4 +66,4 @@ jobs:
 #              only:
 #                - master
 #    jobs:
-#      - make_groups
+#      - build
