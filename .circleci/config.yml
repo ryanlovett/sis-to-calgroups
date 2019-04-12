@@ -37,9 +37,9 @@ jobs:
       - run:
           name: unlock secrets
           command: |
-            echo "${GIT_CRYPT_KEY}" | base64 -d > ~/repo/key
-            git crypt unlock ~/repo/key
-            rm ~/repo/key
+            echo "${GIT_CRYPT_KEY}" | base64 -d > ~/git-crypt.key
+            git-crypt unlock ~/git-crypt.key
+            rm ~/git-crypt.key
 
       - run:
           # these should be split into parallel jobs
