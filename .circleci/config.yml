@@ -51,7 +51,7 @@ jobs:
             for filename in ~/repo/courses/*json ; do
               echo ${filename}
               jq -r '.[] | [ .year, .semester, .class ] | @sh' < ${filename} | \
-                xargs -n 3 ./make-groups.sh
+                xargs -n 3 ~/repo/make-groups.sh
             done
 
 #workflows:

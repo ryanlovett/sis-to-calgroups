@@ -9,8 +9,8 @@ grouper_creds="${HOME}/repo/secrets/grouper.json"
 for filename in $sis_creds $grouper_creds ; do
 	if [ ! -f $filename ]; then
 		echo No such file: $filename
+		exit 1
 	fi
-	exit 1
 done
 
 # root grouper folder
