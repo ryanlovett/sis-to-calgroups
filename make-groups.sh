@@ -18,7 +18,7 @@ org_fldr="edu:berkeley:org:stat:classes"
 class_prefix_salt="stat-classes"
 
 # system of record constituents
-sor_constituents="enrolled waitlisted gsis instructors"
+sor_constituents="enrolled waitlisted instructors"
 
 if [ -z "$3" ]; then
 	echo usage: $0 YEAR TERM SECTION_NUMBER
@@ -30,7 +30,7 @@ year=$1 ; term=$2 ; class=$3
 outdir=`mktemp -d`
 
 echo sis: for $year $term $class
-for constituent in enrolled waitlisted gsis instructors ; do
+for constituent in enrolled waitlisted instructors ; do
 	echo sis: getting $constituent
 	sis -f ${sis_creds} people -y $year -s $term -n $class \
 		-c $constituent > \
@@ -78,7 +78,6 @@ echo R all
 grouper -C ${grouper_creds} replace -g ${group} \
 	${class_prefix}-enrolled \
 	${class_prefix}-waitlisted \
-	${class_prefix}-gsis \
 	${class_prefix}-instructors \
 	${class_prefix}-non-enrolled
 echo P ${group}
