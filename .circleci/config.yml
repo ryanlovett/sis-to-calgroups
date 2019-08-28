@@ -11,7 +11,7 @@ jobs:
           name: Install base apt packages
           command: |
             apt-get update --yes -qq
-            apt-get install --yes -qq python3.7 python3.7-venv jq git-crypt
+            apt-get install --yes -qq python3.7 python3.7-venv jq git-crypt python3-pip python3-setuptools
 
       - checkout
 
